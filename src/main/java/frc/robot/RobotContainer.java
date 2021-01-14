@@ -12,6 +12,7 @@ import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.commands.ExampleCommand;
 import frc.robot.commands.MotorSpeedCommand;
 import frc.robot.controls.Controls;
+import frc.robot.subsystems.ClimberSubsystem;
 import frc.robot.subsystems.ExampleSubsystem;
 import frc.robot.subsystems.IntakeSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
@@ -26,6 +27,7 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
   private final IntakeSubsystem INTAKE = new IntakeSubsystem();
+  private final ClimberSubsystem CLIMB;
 
   private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
   private final MotorSpeedCommand speedCommand = new MotorSpeedCommand(m_exampleSubsystem, .5);
@@ -38,6 +40,7 @@ public class RobotContainer {
    */
   public RobotContainer() {
     // Configure the button bindings
+    CLIMB = new ClimberSubsystem();
     configureButtonBindings();
   }
 

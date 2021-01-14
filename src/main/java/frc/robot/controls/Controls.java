@@ -13,6 +13,6 @@ public class Controls {
         SmartDashboard.putData("run", new MotorSpeedCommand(subsystem, 0.5));
         SmartDashboard.putData("stop", new MotorSpeedCommand(subsystem, 0.0));
 
-        SmartDashboard.putData("stop", new IntakeRunCommand(intake, 0.5));
+        SmartDashboard.putData("normal", new IntakeRunCommand(intake, 0.5));
     }
 }
